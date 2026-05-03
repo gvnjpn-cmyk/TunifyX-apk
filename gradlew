@@ -4,7 +4,7 @@ cd "$(dirname "$0")/" >/dev/null
 APP_HOME="$(pwd -P)"
 cd "$SAVED" >/dev/null
 APP_BASE_NAME="$(basename "$0")"
-DEFAULT_JVM_OPTS="-Xmx512m -Xms128m"'
+DEFAULT_JVM_OPTS="-Xmx1024m -Xms256m"
 die() { echo; echo "$*"; echo; exit 1; }
 if [ -n "$JAVA_HOME" ]; then
     JAVACMD="$JAVA_HOME/bin/java"
