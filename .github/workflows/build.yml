@@ -18,8 +18,13 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Grant execute permission
-        run: chmod +x gradlew
+      - name: Setup Gradle 8.4
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: 8.4
+
+      - name: Generate Wrapper
+        run: gradle wrapper
 
       - name: Build APK
         run: ./gradlew assembleDebug
